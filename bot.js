@@ -13,16 +13,3 @@ client.on('message', message => {
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
-
-down vote
-const commando = require('discord.js-commando');
-const prefix = ":";
-const bot = new commando.Client({
-    commandPrefix: prefix
-});
-
-bot.registry.registerGroup('random', 'Random');
-bot.registry.registerCommandsIn(__dirname + "/commands");
-
-bot.login('Botcode'
-);
