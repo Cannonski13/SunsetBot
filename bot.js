@@ -23,12 +23,14 @@ client.on('message', message => {
   	}
 });
 
-//status
-bot.user.setStatus("Online")
 
-bot.user.setGame("!help")
-
-});
+bot.on('guildMemberAdd', member => {
+    
+    console.log('User' + member.user.username + 'has joined the server!')
+    
+    var role = member.guild.roles.find('name','User');
+    
+    member.addRole(Member)
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
