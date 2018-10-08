@@ -1,26 +1,38 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const Eris = require('eris');
+const bot = new Eris('NDgyMjM4ODQzNDI1MjU5NTIz.Dp0uPA.vPgH9ucZu1MJTC1tjiIKesVRmXw');
 
-client.on('ready', () => {
-    console.log('I am ready!');
+bot.on('ready', () => {
+	console.log('Connected');
+	bot.editStatus('online', {name: 'im online!', type :0})
 });
 
-client.on('message', message => {
-    if (message.content === '!updates') {
-    	message.reply('commands can be found here: https://docs.google.com/document/d/1N9rm2l-dF305MAUNLJp80HhokmWhZ-1dQ2xbm-CMv_s/edit?usp=sharing')  
-                     
- 
-  	}
+bot.on('messageCreate', msg => {
+	const usedby = `Command ${msg.content} used by ${msg.member.username}#${msg.member.discriminator} (${msg.member.id})`;
+
+	if (msg.author.bot) return;
+
+    if (msg.content === '!updates') {
+		bot.createMessage(msg.channel.id, 'Commands can be found here: https://docs.google.com/document/d/1N9rm2l-dF305MAUNLJp80HhokmWhZ-1dQ2xbm-CMv_s/edit?usp=sharing')
+		.catch((e) => {console.log(e)});
+		
+		console.log(usedby);
+	};
+
+	if (msg.content === '!help') {
+		bot.createMessage(msg.channel.id, 'If you are needing help join the support server here: https://discord.gg/zw8Yzhf')
+		.catch((e) => {console.log(e)});
+
+		console.log(usedby);
+	};
+	  
+    if (msg.content === '!addme') {
+		bot.createMessage(msg.channel.id, 'You can add me here: https://discordapp.com/api/oauth2/authorize?client_id=497951381819359233&permissions=0&scope=bot')
+		.catch((e) => {console.log(e)});
+
+		console.log(usedby);
+  	};
+
 });
-client.on('message', message => {
-    if (message.content === '!help') {
-    	message.reply('If you are needing help join the support server here: https://discord.gg/zw8Yzhf') 
-  	}
-});
-client.on('message', message => {
-    if (message.content === '!addme') {
-    	message.reply('You can add me here: https://discordapp.com/api/oauth2/authorize?client_id=497951381819359233&permissions=0&scope=bot');
-  	}
-});
+
 // THIS  MUST  BE  THIS  WAY
-client.login(process.env.BOT_TOKEN);
+bot.connect();
