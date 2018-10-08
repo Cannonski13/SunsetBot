@@ -6,7 +6,14 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'help') {
+    if (message.content === '!updates') {
+    	message.reply('commands can be found here: https://docs.google.com/document/d/1N9rm2l-dF305MAUNLJp80HhokmWhZ-1dQ2xbm-CMv_s/edit?usp=sharing')  
+                     
+ 
+  	}
+});
+client.on('message', message => {
+    if (message.content === '!help') {
     	message.reply('If you are needing help join the support server here: https://discord.gg/zw8Yzhf') 
   	}
 });
