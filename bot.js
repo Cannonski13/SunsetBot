@@ -23,6 +23,12 @@ client.on('message', message => {
   	}
 });
 
+//status
+bot.user.setStatus("Online")
+
+bot.user.setGame("!help")
+
+});
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
