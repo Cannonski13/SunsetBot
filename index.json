@@ -1,0 +1,9 @@
+[
+	"eval",
+	"listroles",
+	"ping",
+	"warn",
+	"kick",
+	"ban",
+	"reason"
+]
