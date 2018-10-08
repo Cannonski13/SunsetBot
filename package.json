@@ -1,5 +1,5 @@
 {
-  "name": "SunsetBot",
+  "name": "sunset-bot",
   "description": "New bot to help you out!",
   "version": "0.0.1",
   "main": "bot.js",
@@ -7,7 +7,6 @@
     "start": "node bot.js"
   },
   "dependencies": {
-    "discord.js": "11.1.0",
-    "request": "2.81.0"
+    "eris": "0.9.0"
   }
 }
