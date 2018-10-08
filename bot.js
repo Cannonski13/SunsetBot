@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === 'help') {
-    	message.reply('If you are needing help dm @mattyflare') 
+    	message.reply('If you are needing help join the support server here: https://discord.gg/zw8Yzhf') 
   	}
 });
 client.on('message', message => {
