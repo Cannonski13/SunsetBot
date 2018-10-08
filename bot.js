@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on("ready",() => {
-  client.user.setGame(prefix + "ping");
+  client.user.setGame(prefix + "!ping");
   console.log("SunsetBot is ready for use")  
 });
 
