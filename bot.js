@@ -22,15 +22,5 @@ client.on('message', message => {
     	message.reply('You can add me here: https://discordapp.com/api/oauth2/authorize?client_id=497951381819359233&permissions=0&scope=bot');
   	}
 });
-
-
-bot.on('guildMemberAdd', member => {
-    
-    console.log('User' + member.user.username + 'has joined the server!')
-    
-    var role = member.guild.roles.find('name','User');
-    
-    member.addRole(Member)
-
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
