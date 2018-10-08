@@ -7,7 +7,7 @@ client.on("ready",() => {
 });
 
 const prefix = "!" //this is the bots prefix
-client.on('!ready', () => {
+client.on('ready', () => {
     console.log('I am ready!');
 });
 
