@@ -34,5 +34,4 @@ bot.on('messageCreate', msg => {
 
 });
 
-// THIS  MUST  BE  THIS  WAY
 bot.connect();
