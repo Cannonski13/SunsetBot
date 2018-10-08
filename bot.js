@@ -1,5 +1,5 @@
 const Eris = require('eris');
-const bot = new Eris('NDgyMjM4ODQzNDI1MjU5NTIz.Dp0uPA.vPgH9ucZu1MJTC1tjiIKesVRmXw');
+const bot = new Eris(process.env.BOT_TOKEN);
 
 bot.on('ready', () => {
 	console.log('Connected');
@@ -14,7 +14,7 @@ bot.on('messageCreate', msg => {
     if (msg.content === '!updates') {
 		bot.createMessage(msg.channel.id, 'Commands can be found here: https://docs.google.com/document/d/1N9rm2l-dF305MAUNLJp80HhokmWhZ-1dQ2xbm-CMv_s/edit?usp=sharing')
 		.catch((e) => {console.log(e)});
-		
+
 		console.log(usedby);
 	};
 
