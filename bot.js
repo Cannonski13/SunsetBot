@@ -3,7 +3,7 @@ const bot = new Eris(process.env.BOT_TOKEN);
 
 bot.on('ready', () => {
 	console.log('Connected');
-	bot.editStatus('online', {name: 'im online!', type :0})
+	bot.editStatus('online', {name: 'Command !', type :0})
 });
 
 bot.on('messageCreate', msg => {
