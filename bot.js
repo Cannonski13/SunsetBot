@@ -31,7 +31,7 @@ bot.on('messageCreate', msg => {
 
     if (msg.content === '!help') {
         bot.createMessage(msg.channel.id, {embed: {
-            description: 'If you are needing help join the support server here: https://discord.gg/zw8Yzhf'
+            description: 'If you require help than please join the support server here: https://discord.gg/zw8Yzhf'
         }})
         .catch((e) => {console.log(e)});
 
